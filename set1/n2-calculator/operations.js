@@ -15,4 +15,15 @@ function multiply(first, second) {
     return first * second;
 }
 
-module.exports = { add, subtract, multiply };
+function divide(first, second) {
+    if (second === 0) {
+        throw new RangeError("Cannot divide by zero.");
+    }
+    return first / second;
+}
+
+function average(...numbers) {
+    return numbers.reduce((sum, number) => sum + number, 0) / numbers.length;
+}
+
+module.exports = { add, subtract, multiply, divide, average };
